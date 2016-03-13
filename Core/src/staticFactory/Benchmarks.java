@@ -18,6 +18,12 @@ public class Benchmarks {
         System.out.println(fc.hashCode());
         FixedStaticClass fc2 = FixedStaticClass.getFixedInstance();
         System.out.println(fc2.hashCode());
+        ArrayList list = new ArrayList<>();
+        list.add(15);
+        list.add("3");
+        for (Object i : list) {
+            System.out.println(i);
+        }
     }
 }
 
