@@ -1,3 +1,5 @@
+package BuilderPattern;
+
 /**
  * Created by Tim Wang on 3/12/2016.
  */
