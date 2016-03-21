@@ -33,9 +33,32 @@ public class EqualsDemo {
 
      /*
         The Liskov substitution principle:
+        #! The Liskov substitution principle says that any important property of a type
+        should also hold for its subtypes, so that any method written for the type should
+        work equally well on its subtypes.
 
         
          */
 
+
+    /*
+        Putting it all together, here’s a recipe for a high-quality equals method:
+        1, Use the == operator to check if the argument is a reference to this object.
+        2, Use the instanceof operator to check if the argument has the correct type.
+        3, Cast the argument to the correct type.
+        4, For each “significant” field in the class, check if that field of the argument
+            matches the corresponding field of this object.
+        5, When you are finished writing your equals method, ask yourself three
+            questions: Is it symmetric? Is it transitive? Is it consistent?
+        6, 
+    */
+    
+    /* Also need to do!
+    1. Always override hashCode when you override equals
+    2. Don’t try to be too clever.
+    3. Don’t substitute another type for Object in the equals declaration.
+    Do Not: public boolean equals(MyClass o), overload equals
+    Do: @Override public boolean equals(MyClass o)
+    */
 
 }
