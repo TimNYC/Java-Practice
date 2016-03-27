@@ -18,7 +18,7 @@ public class CloneDemo implements Cloneable {
 
     }
     public static CloneDemo newInstance(CloneDemo c) {
-
+        return null;
     }
     /*
     Interface-based copy constructors and factories, more
