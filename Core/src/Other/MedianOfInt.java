@@ -31,7 +31,7 @@ public class MedianOfInt {
                 max.add(maxRoot);
             }
         } else {
-            min.add(max)
+            //min.add(max);
         }
     }
 
