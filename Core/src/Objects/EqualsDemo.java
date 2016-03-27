@@ -37,7 +37,6 @@ public class EqualsDemo {
         should also hold for its subtypes, so that any method written for the type should
         work equally well on its subtypes.
 
-        
          */
 
 
