@@ -9,6 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.Assert;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -43,9 +44,23 @@ public class basicTest {
         //driver.findElement(By.xpath(":'")).sendKeys(prop.getProperty("username"));
     }
 
-    public static void main(String[] args) throws MalformedURLException, IOException{
+    public static void remoteDriver() throws MalformedURLException {
+        DesiredCapabilities dc= DesiredCapabilities.firefox();
+        dc.setCapability("version", "5");
+        dc.setCapability("platform", "XP");
+        WebDriver driver = new RemoteWebDriver(
+                new URL("http://rahul1:e950d779-1817-4c3c-b122-06715b814dfd@ondemand.saucelabs.com:80/wd/hub"),
+                dc);
+
+        driver.get("http://ebay.com");
+        System.out.println(driver.getTitle());
+        Assert.assertEquals("Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay", driver.getTitle());
+    }
+
+    public static void main(String[] args) throws IOException{
         //testChrome();
         //testBase();
+        remoteDriver();
 
     }
 }
