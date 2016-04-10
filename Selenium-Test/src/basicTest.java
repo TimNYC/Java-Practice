@@ -19,7 +19,11 @@ public class basicTest {
         //System.out.println(driver.getPageSource());
     }
 
-    public static void
+    public static void testBase() {
+        WebDriver driver=null;
+
+    }
+
     public static void main(String[] args) throws MalformedURLException{
         testChrome();
 
