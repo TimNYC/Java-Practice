@@ -57,10 +57,20 @@ public class basicTest {
         Assert.assertEquals("Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay", driver.getTitle());
     }
 
+
+    public static void loginLinkedin() {
+        WebDriver driver = new FirefoxDriver();
+        driver.get("http://linkedin.com");
+        driver.findElement(By.id("login-email")).sendKeys("123123");
+        driver.findElement(By.id("login-password")).sendKeys("123123");
+        driver.findElement(By.xpath("//*[@id=\"pagekey-uno-reg-guest-home\"]/div[1]/div/form/input[6]")).click();
+    }
+
     public static void main(String[] args) throws IOException{
         //testChrome();
         //testBase();
-        remoteDriver();
+        //remoteDriver();
+        loginLinkedin();
 
     }
 }
