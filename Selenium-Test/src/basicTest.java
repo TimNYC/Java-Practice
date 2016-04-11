@@ -29,7 +29,7 @@ public class basicTest {
     public static void testBase() throws IOException {
         WebDriver driver = null;
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream("Web-Crawler/properties/dataDriven.properties");
+        FileInputStream fis = new FileInputStream("Selenium-Test/properties/dataDriven.properties");
         prop.load(fis);
         if(prop.getProperty("browser").equals("firefox")) {
             driver =new FirefoxDriver();
